@@ -7,23 +7,11 @@ namespace _Scripts.Lobby_Scripts {
         private const int MainSceneId = 1;
         
         
-        public void ExitButton()
-        {
+        public void ExitButton() {
             Application.Quit();
         }
-        public void ChooseGameMode(int gameMode)
-        {
+        public void ChooseGameMode(int gameMode) {
             GameModeTransmitter.GameMode = (GameMode) gameMode;
-
-            // LoadSceneAsync();
         }
-
-        // private void LoadSceneAsync()
-        // {
-        //     AsyncSceneLoader asyncSceneLoader = new AsyncSceneLoader();
-        //     StartCoroutine(asyncSceneLoader.LoadSceneRoutine(MainSceneId));
-        //
-        //     asyncSceneLoader.SetLoadPermission(true);
-        // }
     }
 }

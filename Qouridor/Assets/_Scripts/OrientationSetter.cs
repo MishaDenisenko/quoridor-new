@@ -4,10 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class OrientationSetter : MonoBehaviour
-{
-    public enum Orientation
-    {
+public class OrientationSetter : MonoBehaviour {
+    public enum Orientation {
         Any,
         Portrait,
         PortraitFixed,
@@ -17,10 +15,8 @@ public class OrientationSetter : MonoBehaviour
 
     public Orientation ScreenOrientation;
 
-   private void Start()
-    {
-        switch (ScreenOrientation)
-        {
+   private void Start() {
+        switch (ScreenOrientation) {
             case Orientation.Any:
                 Screen.orientation = UnityEngine.ScreenOrientation.AutoRotation;
                 
@@ -29,7 +25,6 @@ public class OrientationSetter : MonoBehaviour
                 break;
             
             case Orientation.Portrait:
-                // Force screen to orient right, then switch to Auto
                 Screen.orientation = UnityEngine.ScreenOrientation.Portrait;
                 Screen.orientation = UnityEngine.ScreenOrientation.AutoRotation;
                 
@@ -42,7 +37,6 @@ public class OrientationSetter : MonoBehaviour
                 break;
             
             case Orientation.Landscape:
-                // Force screen to orient right, then switch to Auto
                 Screen.orientation = UnityEngine.ScreenOrientation.Landscape;
                 Screen.orientation = UnityEngine.ScreenOrientation.AutoRotation;
                 
